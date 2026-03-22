@@ -19,7 +19,7 @@ mod gui_util;
 mod mutations;
 mod queries;
 mod session;
-#[cfg(all(test, not(feature = "ts-rs")))]
+#[cfg(test)]
 mod tests;
 
 use std::env::{self, VarError};

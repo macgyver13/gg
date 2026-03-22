@@ -7,7 +7,7 @@
 //! Use [`read_config`] to load the merged configuration, and [`GGSettings`]
 //! to access individual values with their defaults.
 
-#[cfg(all(test, not(feature = "ts-rs")))]
+#[cfg(test)]
 pub mod tests;
 
 use std::collections::{HashMap, HashSet};
