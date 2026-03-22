@@ -60,6 +60,11 @@
                     shift: event.shiftKey,
                 });
             }
+            // native Enter accelerator intercepts before webview on macOS — forward Cmd/Ctrl+Enter ourselves
+            if (key === "enter" && (event.metaKey || event.ctrlKey)) {
+                event.preventDefault();
+                window.dispatchEvent(new CustomEvent("gg:describe"));
+            }
         });
     }
 
